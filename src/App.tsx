@@ -5,10 +5,8 @@ import Swithcer from './components/Switcher/Swithcer';
 import Pomodoro from './components/Pomodoro/Pomodoro';
 import SettingsBtn from './components/SettingsBtn/SettingsBtn';
 import Modal from './components/Modal/Modal';
-import { useAppSelector } from './store/store';
 
 const App: FC = () => {
-
   return (
     <div className={classes.container}>
       <Title />
