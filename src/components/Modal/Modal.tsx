@@ -17,16 +17,25 @@ const Modal: FC = () => {
     }
 
     const applySettingsBtn = () => {
-        const pomodoro = +(localStorage.getItem("pomodoro") as string);
-        const shortBreak = +(localStorage.getItem("shortBreak") as string);
-        const longBreak = +(localStorage.getItem("longBreak") as string);
+        const pomodoro = localStorage.getItem("pomodoro") as string;
+        const shortBreak = localStorage.getItem("shortBreak") as string;
+        const longBreak = localStorage.getItem("longBreak") as string;
 
         dispatch(applySetting());
         dispatch(setTimer({
             newState: {
-                pomodoro: { seconds: pomodoro, isPause: true, myDeg: 360 },
-                shortBreak: { seconds: shortBreak, isPause: true, myDeg: 360 },
-                longBreak: { seconds: longBreak, isPause: true, myDeg: 360 }
+                pomodoro: {
+                    seconds: pomodoro === "0" ? 1800 : +pomodoro,
+                    isPause: true, myDeg: 360
+                },
+                shortBreak: {
+                    seconds: shortBreak === "0" ? 600 : +shortBreak,
+                    isPause: true, myDeg: 360
+                },
+                longBreak: {
+                    seconds: longBreak === "0" ? 1500 : +longBreak,
+                    isPause: true, myDeg: 360
+                }
             }
         }));
     }

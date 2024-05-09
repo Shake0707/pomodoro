@@ -12,15 +12,29 @@ const Swithcer: FC = () => {
     const dispatch = useAppDispatch();
     const [play] = useSound({ url: switchSound, params: { volume: 0.5 } });
 
+
     const handleChange: FormEventHandler<HTMLFormElement> = e => {
+        const pomodoroSecs = localStorage.getItem("pomodoro") as string;
+        const shortBrSecs = localStorage.getItem("shortBreak") as string;
+        const longBrSecs = localStorage.getItem("longBreak") as string;
+
         const id = ((e.target as HTMLInputElement).id as TMode)
         dispatch(toggleMode({ mode: id }));
         play();
         dispatch(setTimer({
             newState: {
-                pomodoro: { seconds: 1800, isPause: true, myDeg: 360 },
-                shortBreak: { seconds: 600, isPause: true, myDeg: 360 },
-                longBreak: { seconds: 1500, isPause: true, myDeg: 360 }
+                pomodoro: {
+                    seconds: pomodoroSecs === "0" ? 1800 : +pomodoroSecs,
+                    isPause: true, myDeg: 360
+                },
+                shortBreak: {
+                    seconds: shortBrSecs === "0" ? 600 : +shortBrSecs,
+                    isPause: true, myDeg: 360
+                },
+                longBreak: {
+                    seconds: longBrSecs === "0" ? 1500 : +longBrSecs,
+                    isPause: true, myDeg: 360
+                }
             }
         }));
     }

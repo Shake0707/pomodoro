@@ -17,6 +17,7 @@ const Main: FC = () => {
     const dispatch = useDispatch();
     const [play] = useSound({ url: soundComplated });
     const [start] = useSound({ url: soundStart });
+    
 
     useEffect(() => {
         if (!isPause) {

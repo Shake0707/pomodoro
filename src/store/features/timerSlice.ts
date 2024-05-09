@@ -41,7 +41,7 @@ export const timerSlice = createSlice({
             state.timers[dispatch.payload.type].seconds = state.timers[dispatch.payload.type].seconds - 1;
         },
         changeDeg: (state, dispatch: PayloadAction<{ type: TMyType }>) => {
-            const localNum = localStorage.getItem("pomodoro") as string;
+            const localNum = localStorage.getItem(dispatch.payload.type) as string;
             let defaultSecunds = "1800";
             switch (dispatch.type) {
                 case "shortBreak":
