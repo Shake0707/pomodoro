@@ -1,0 +1,11 @@
+.frame {
+    padding: 24px 40px 60px;
+}
+
+.horizantalRow {
+    width: 100%;
+    height: 1px;
+    background: #161932;
+    opacity: 0.1;
+}
+

@@ -1,0 +1,25 @@
+.frame {
+    margin: 19px 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.38em;
+    color: #161932;
+}
+
+.changers_frame {
+    display: flex;
+    gap: 16px;
+}
+
+.changers_frame input:checked~span {
+    opacity: 1;
+    background-color: #161932;
+    color: white;
+}

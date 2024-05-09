@@ -1,0 +1,23 @@
+.frame {
+    margin-top: 19px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 13px;
+    letter-spacing: 0.38em;
+    color: #161932;
+    text-transform: uppercase;
+}
+
+.colorChangers {
+    display: flex;
+    gap: 16px;
+}
+
+.colorChangers input:checked~span img {
+    opacity: 1;
+}

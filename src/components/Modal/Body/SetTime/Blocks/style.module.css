@@ -1,0 +1,45 @@
+.timesBlock {
+    max-width: 140px;
+    color: #1e213f;
+    margin-top: 19px;
+
+    & span {
+        opacity: 0.4;
+        font-size: 12px;
+    }
+
+    & .content {
+        display: flex;
+        align-items: center;
+        padding: 14px 16px;
+        cursor: pointer;
+        background-color: #eff1fa;
+        border-radius: 10px;
+
+        & input {
+            width: 17px;
+            height: 17px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            font-family: var(--font);
+            background-color: transparent;
+            margin-right: 79px;
+        }   
+    }
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    & img {
+        cursor: pointer;
+        opacity: 0.25;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

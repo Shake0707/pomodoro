@@ -1,0 +1,9 @@
+.frame {
+    padding-top: 48px;
+    padding-bottom: 47px;
+
+    &>h1 {
+        text-align: center;
+        font-family: "Kumbh Sans";
+    }
+}

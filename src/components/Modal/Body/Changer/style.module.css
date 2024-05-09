@@ -1,0 +1,90 @@
+.frame {
+    cursor: pointer;
+    font-family: "Kumbh Sans";
+    border-radius: 50%;
+    position: relative;
+
+    & span {
+        width: 40px;
+        height: 40px;
+        background-color: #eff1fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #1e213f;
+        transition: all .3s ease-in-out;
+        font-size: 15px;
+        position: relative;
+        z-index: 2;
+
+        &.font {
+            opacity: 0.73;
+        }
+
+        &.color img {
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+    }
+
+    &>div {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background-color: #eff1fa;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+
+        &::before {
+            content: "";
+            display: block;
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
+            background-color: white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+        }
+    }
+
+    &:hover {
+        &>div {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &:nth-child(1) {
+        span.color {
+            background-color: #F87070;
+        }
+    }
+
+    &:nth-child(2) {
+        font-family: "Roboto Slab";
+        font-weight: 400;
+
+        span.color {
+            background-color: #70F3F8;
+
+        }
+    }
+
+    &:nth-child(3) {
+        font-family: "Space Mono";
+
+        span.color {
+            background-color: #D881F8;
+        }
+    }
+
+    & input {
+        display: none;
+    }
+}

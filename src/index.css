@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@700&family=Space+Mono:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+:root {
+  --font: "Kumbh Sans";
+
+  &.roboto {
+    --font: "Roboto Slab";
+  }
+
+  &.space {
+    --font: "Space Mono";
+
+    & p {
+      font-size: 13px;
+    }
+  }
+}
+
+body {
+  background-color: #1E213F;
+  color: white;
+
+  font-family: var(--font), sans-serif;
+  font-weight: 700;
+
+  --color: #F87070;
+
+  &.cyan {
+    --color: #70F3F8;
+  }
+
+  &.purple {
+    --color: #D881F8;
+  }
+}

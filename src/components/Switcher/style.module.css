@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+}
+
+.frame {
+    display: inline-flex;
+    padding: 8px 8px 7px 8px;
+    background-color: #161932;
+    border-radius: 31.5px;
+
+    & input {
+        display: none;
+
+        &:checked~p {
+            background-color: var(--color);
+            color: #1E213F;
+        }
+    }
+
+    & p {
+        padding: 14px 26px 16px 26px;
+        color: #979797;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 26.5px;
+        transition: all .3s ease-in-out;
+        word-break: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
