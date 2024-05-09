@@ -2,6 +2,8 @@ import { FC, MouseEventHandler, useState } from 'react';
 import classes from "./style.module.css";
 import { usePress } from './logick';
 import { TTimerSlice } from '../../../../../types';
+import upp from "../../../../../assets/miniUpp.svg";
+import down from "../../../../../assets/miniDown.svg";
 
 interface IProps {
     title: 'pomodoro' | 'short break' | 'long break';
@@ -36,8 +38,8 @@ const Block: FC<IProps> = ({ title, type }) => {
             <label className={classes.content}>
                 <input type="text" value={val} onKeyDown={handleChange} onChange={handleCh} />
                 <div className={classes.images}>
-                    <img src="/miniUpp.svg" alt="" onClick={handleUp} />
-                    <img src="/miniDown.svg" alt="" onClick={handleDown} />
+                    <img src={upp} alt="" onClick={handleUp} />
+                    <img src={down} alt="" onClick={handleDown} />
                 </div>
             </label>
         </div>

@@ -5,6 +5,8 @@ import { convertToTime } from '../logick';
 import { useDispatch } from 'react-redux';
 import { changeDeg, increment, setTimer, toggleIsPause } from '../../../store/features/timerSlice';
 import { useSound } from '../../../hooks/useSound';
+import soundComplated from "../../../assets/sounds/complated.mp3";
+import soundStart from "../../../assets/sounds/start.mp3";
 
 let myInterval: number;
 
@@ -13,8 +15,8 @@ const Main: FC = () => {
     const timers = useAppSelector(state => state.timer.timers);
     const { isPause, seconds, myDeg } = timers.pomodoro;
     const dispatch = useDispatch();
-    const [play] = useSound({ url: "/sounds/complated.mp3" });
-    const [start] = useSound({ url: "/sounds/start.mp3" });
+    const [play] = useSound({ url: soundComplated });
+    const [start] = useSound({ url: soundStart });
 
     useEffect(() => {
         if (!isPause) {

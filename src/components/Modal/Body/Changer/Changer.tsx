@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import classes from "./style.module.css";
+import src from "../../../../assets/complated.svg"
 
 interface IPorps {
     name: string;
@@ -17,7 +18,7 @@ const Changer: FC<IPorps> = ({ defaultChecked, id, name, checkType }) => {
                     <span className={classes.font}>Aa</span>
                 ) : (
                     <span className={classes.color}>
-                        <img src="/complated.svg" alt="" />
+                        <img src={src} alt="" />
                     </span>
                 )
             }

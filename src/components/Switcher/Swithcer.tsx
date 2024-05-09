@@ -5,11 +5,12 @@ import { toggleMode } from '../../store/features/pomodoroModeSlice';
 import { TMode } from '../../types';
 import { setTimer } from '../../store/features/timerSlice';
 import { useSound } from '../../hooks/useSound';
+import switchSound from "../../assets/sounds/switch.mp3";
 
 const Swithcer: FC = () => {
     const mode = useAppSelector(state => state.mode.mode);
     const dispatch = useAppDispatch();
-    const [play] = useSound({ url: "/sounds/switch.mp3", params: { volume: 0.5 } });
+    const [play] = useSound({ url: switchSound, params: { volume: 0.5 } });
 
     const handleChange: FormEventHandler<HTMLFormElement> = e => {
         const id = ((e.target as HTMLInputElement).id as TMode)

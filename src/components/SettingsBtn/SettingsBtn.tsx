@@ -2,6 +2,7 @@ import { FC, MouseEventHandler } from 'react'
 import classes from "./style.module.css";
 import { useAppDispatch } from '../../store/store';
 import { toggleIsOpen } from '../../store/features/styleSettingsSlice';
+import shape from "../../assets/shape.png";
 
 const SettingsBtn: FC = () => {
     const dispatch = useAppDispatch();
@@ -11,7 +12,7 @@ const SettingsBtn: FC = () => {
 
     return (
         <div className={classes.frame}>
-            <img src="/shape.svg" alt="" onClick={hanldeClick} />
+            <img src={shape} alt="" onClick={hanldeClick} />
         </div>
     )
 }
