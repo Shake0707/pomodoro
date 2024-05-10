@@ -13,3 +13,12 @@
         cursor: pointer;
     }
 }
+
+@media screen and (max-width:500px) {
+    .frame {
+        padding: 29px 24px 29px 32px;
+        &>h1 {
+            font-size: 20px;
+        }
+    }
+}

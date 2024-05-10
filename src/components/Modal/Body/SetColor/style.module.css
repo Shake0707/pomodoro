@@ -21,3 +21,15 @@
 .colorChangers input:checked~span img {
     opacity: 1;
 }
+
+@media screen and (max-width:500px) {
+    .frame {
+        flex-direction: column;
+        margin-top: 24px;
+    }
+
+    .title {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+}

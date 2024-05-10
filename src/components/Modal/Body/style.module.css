@@ -9,3 +9,8 @@
     opacity: 0.1;
 }
 
+@media screen and (max-width:500px) {
+    .frame {
+        padding: 24px 24px 40px 23px;
+    }
+}

@@ -1,12 +1,13 @@
 .container {
     text-align: center;
+    position: relative;
 }
 
 .frame {
     display: inline-flex;
-    padding: 8px 8px 7px 8px;
+    padding: 8px 7px 7px;
     background-color: #161932;
-    border-radius: 31.5px;
+    border-radius: 31px;
 
     & input {
         display: none;
@@ -28,6 +29,17 @@
 
         &:hover {
             color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .frame {
+        padding: 8px 6.14px 7px;
+
+        & p {
+            padding: 16px 24.41px 16px 22.79px;
+            font-size: 12px;
         }
     }
 }

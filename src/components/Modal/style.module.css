@@ -1,7 +1,7 @@
 .container {
+    position: fixed;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    position: fixed;
     inset: 0;
     z-index: -1;
     background: rgba(10, 12, 28, 0.5);
@@ -10,10 +10,12 @@
 .frame {
     max-width: 540px;
     margin: 0 auto;
-    margin-top: 155px;
     border-radius: 25px;
     background-color: white;
-    position: relative;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .headerLine {
@@ -44,5 +46,11 @@
 
     &:hover {
         background-color: rgb(252, 184, 184);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .frame {
+        max-width: 327px;
     }
 }
